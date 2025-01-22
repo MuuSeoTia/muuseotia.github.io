@@ -1,0 +1,17 @@
+.stack-work/
+dist/
+dist-newstyle/
+*.cabal
+*.hi
+*.o
+*~
+.DS_Store
+.env
+node_modules/
+.vscode/
+.idea/
+hello
+
+*.swp
+book/
+mdbook
