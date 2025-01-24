@@ -1,0 +1,54 @@
+name: personal-blog
+version: 0.1.0.0
+github: "MuuSeoTia/personal-blog"
+license: BSD3
+author: "Mouad Tiahi"
+maintainer: "tiahimouad22@example.com"
+copyright: "2024 Mouad Tiahi"
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+description: Please see the README on GitHub at <https://github.com/yourusername/personal-blog#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- clay >= 0.15
+- lucid >= 2.11
+- text
+- bytestring
+- directory
+- filepath
+- time >= 1.12
+- pandoc
+- aeson >= 2.1
+- blaze-html
+- blaze-markup
+- containers
+- mtl
+
+library:
+  source-dirs: src
+
+executables:
+  personal-blog-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - personal-blog
+
+tests:
+  personal-blog-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - personal-blog 
